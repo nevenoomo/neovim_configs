@@ -1,7 +1,13 @@
-source ~/.config/nvim/plugins.vim
+if filereadable(expand("~/AppData/Local/nvim/plugins.vim"))
+    source ~/AppData/Local/nvim/plugins.vim
+else
+    source ~/.config/nvim/plugins.vim
+endif
 
-colorscheme delek
-set clipboard=unnamed
+let g:gruvbox_italic=1
+colorscheme gruvbox
+set clipboard^=unnamed,unnamedplus
+set shell=pwsh
 
 set number
 set linebreak
