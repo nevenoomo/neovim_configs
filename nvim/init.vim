@@ -1,5 +1,5 @@
 " Choose the correct config
-if filereadable(expand("~/AppData/Local/nvim/plugins.vim"))
+if has('win32')
     source ~/AppData/Local/nvim/plugins.vim
     set shell=powershell.exe
 else
